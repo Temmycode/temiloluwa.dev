@@ -12,6 +12,8 @@ export default function Home() {
         <Projects />
       </main>
       <Footer />
+      {/* Spacer for mobile bottom nav */}
+      <div className="sm:hidden h-16" />
     </>
   );
 }
