@@ -1,399 +1,232 @@
-# Portfolio Website Instructions
 
-You are building a **personal developer portfolio website** inside the **current folder**.
+# Portfolio Redesign – Claude Instructions
 
-The project must be created using **Next.js (App Router)** with **TypeScript**.
+## 🧭 Overview
 
-The portfolio should showcase **mobile applications** built by the developer.
+This project is a **personal portfolio website redesign**.
+The goal is not just to showcase technical skills, but to express **personality, creativity, and narrative**.
 
-The design philosophy is:
-
-- Extremely clean
-- Developer-oriented
-- Minimal but elegant
-- Smooth UI interactions
-- Dark-mode first
-- Avoid the typical "AI-generated portfolio" look
-
-The UI must feel **intentional, precise, and engineered**.
+This is not a typical “developer portfolio.”
+It should feel **intentional, artistic, and human**, not overly technical or template-like.
 
 ---
 
-# Tech Stack
+## 🎯 Core Goals
 
-Use the following stack:
+1. **Express identity**
 
-- Next.js (latest)
-- TypeScript
-- TailwindCSS
-- Framer Motion (for subtle animations)
-- next/image for optimized images
+   * Reflect my journey, thoughts, and personality
+   * Blend technical and creative sides
 
-Avoid unnecessary libraries.
+2. **Avoid generic developer design**
 
----
+   * No “cookie-cutter” portfolio layouts
+   * Avoid overly corporate or SaaS-like UI
 
-# Visual Design Principles
+3. **Keep implementation simple**
 
-The UI must follow these principles:
+   * No overengineering
+   * No unnecessary abstractions
+   * Prioritize readability and maintainability
 
-### Theme
+4. **Prepare for future expansion**
 
-Default theme: **Dark Mode**
-
-Dark colors should look similar to developer tools:
-
-Background: near-black  
-Panels: slightly lighter dark gray  
-Text: soft white
-
-Example palette:
-
-- Background: #0b0b0c
-- Panel: #121214
-- Text primary: #e6e6e6
-- Text secondary: #9ca3af
-- Accent: subtle cool gray
-
-Light mode should also exist but **dark mode is default**.
-
-Use a **toggle switch** in the header to change themes.
+   * Blog will be added later
+   * Structure should allow this without major refactoring
 
 ---
 
-### Typography
+## 🎨 Design Direction
 
-Fonts should look **developer-focused**, not marketing fonts.
+### Inspiration
 
-Preferred fonts:
-
-- JetBrains Mono
-- Inter
-
-Use JetBrains Mono for titles or highlights and Inter for body text.
-
-Text spacing should feel like **reading code documentation**.
-
----
-
-### Layout Feel
-
-The site should feel like:
-
-- a developer tool
-- a terminal-inspired UI
-- minimalistic
-- precise
-
-Spacing should be intentional.
-
-Avoid:
-
-- large gradients
-- flashy colors
-- large hero illustrations
-- generic startup-style UI
-
-Instead focus on:
-
-- typography
-- structure
-- subtle motion
-- crisp alignment
-
----
-
-# Page Structure
-
-The site should be **single-page** with sections.
-
-Sections:
-
-1. Header
-2. About
-3. Projects
-4. Footer
-
-Scrolling should be smooth.
-
----
-
-# Header
-
-Contains:
-
-- Name
-- Navigation links
-- Theme toggle
-
-Example nav:
-
-About  
-Projects  
-GitHub
-
-Header should become slightly blurred on scroll.
-
----
-
-# About Section
-
-This section introduces the developer.
-
-There is an image available in: /me/
-
-Use that as the profile picture.
-
-The image should be:
-
-- circular
-- slightly grayscale
-- hover animation that removes grayscale
-
-The about text should describe the developer as:
-
-- a mobile developer
-- experienced with Flutter, Dart, Swift, and backend development with FastAPI
-- someone who builds real production apps
-- focused on mobile systems and backend integrations
-
-You can generate a concise developer bio.
-
-The tone should feel like a **technical engineer**, not a marketer.
-
----
-
-# Projects Section
-
-There are **three projects**.
-
-Each project has its **own folder with images**.
-
-The images should be used to create **project preview cards**.
-
-Each card should include:
-
-- Project name
-- Description
-- Technology stack
-- GitHub link
-- Image preview
-
-Cards should have:
-
-- hover animation
-- subtle border
-- slight elevation
-
-Layout should be **grid based**.
-
----
-
-# Project Data
-
-## Adehun
-
-Type: Escrow application
-
-Description:
-
-Adehun is an escrow platform designed to enable secure transactions between two parties.  
-The system ensures funds are held safely until agreed conditions are met.
-
-Tech Stack:
-
-Frontend:
-
-- Flutter
-- Dart
-
-Backend:
-
-- FastAPI
-- Python
-
-Features to highlight:
-
-- escrow workflow
-- transaction safety
-- API-driven architecture
-
-Images are located in:/Adehun/
-
-GitHub links should exist for:
-
-- frontend
-- backend
-
-Add placeholders if needed.
-
----
-
-## Apple Match
-
-Type: Dating application
-
-Description:
-
-Apple Match is a dating application designed to connect people through interest-based matching and real-time interactions.
-
-Tech Stack:
-
-Frontend:
-
-- Flutter
-- Dart
-
-Backend:
-
-- FastAPI
-- Python
-
-Features to highlight:
-
-- profile matching
-- chat system
-- backend APIs
-
-Images are located in:/Apple Match/
-
----
-
-## Guitar Explore
-
-Type: Educational guitar app
-
-Description:
-
-Guitar Explore is an educational application that helps users explore guitars from different manufacturers and understand their characteristics.
-
-Tech Stack:
-
-- Swift
-- SwiftUI
-
-Images located in:/Guitar Explore/
-
----
-
-# Project Cards Behavior
-
-Each project card should:
-
-- animate on hover
-- expand slightly
-- reveal GitHub links
-
-Images should slide horizontally if multiple exist.
-
----
-
-# Animations
-
-Use **Framer Motion** but keep animations subtle.
-
-Allowed animations:
-
-- fade in
-- slight upward motion
-- hover scaling
-- image transitions
-
-Avoid:
-
-- flashy animations
-- large motion effects
-
-Everything must feel **smooth and understated**.
-
----
-
-# Buttons
-
-Buttons should look **engineered**, not decorative.
-
-Design:
-
-- thin border
-- slight hover glow
-- rounded corners (subtle)
-
-Examples:
-
-View Project  
-View GitHub
-
----
-
-# Footer
-
-Footer should contain:
-
-- GitHub link
-- copyright
-- short developer tagline
-
-Example:
-
-"Built with precision."
-
----
-
-# Responsiveness
-
-The layout must work well on:
-
-- desktop
-- tablet
-- mobile
-
-Project cards should stack vertically on mobile.
-
----
-
-# Image Handling
-
-Images already exist in folders.
-
-Automatically load images from each project folder.
-
-Display them as:
-
-- preview image
-- gallery slider
-
-Use Next.js optimized images.
-
----
-
-# Performance
-
-The site should:
-
-- load quickly
-- lazy load images
-- use optimized assets
-
----
-
-# Overall Goal
-
-The final site should feel like:
-
-A **mobile engineer’s workspace**.
-
-Minimal. Precise. Technical.
-
-It should communicate:
-
-"I build real software."
-
-Not:
-
-"I used a website template."
+Use the images in the `/inspiration` directory as the **primary design reference**.
 
 Focus on:
 
-- clarity
-- precision
-- developer personality
+* Strong, expressive hero sections
+* Editorial / magazine-like layouts
+* Creative use of typography
+* Clean but **non-generic spacing and composition**
+
+---
+
+### Design Principles
+
+* **Minimal but expressive**
+* **Typography-driven**
+* **Whitespace is intentional**
+* **Subtle interactions > flashy animations**
+* **Feels personal, not like a product landing page**
+
+---
+
+## 🧱 Sections to Implement
+
+### 1. Hero Section
+
+This is the most important part.
+
+Should:
+
+* Immediately communicate personality
+* Feel bold and distinct
+* Possibly include:
+
+  * Name
+  * Short statement / philosophy
+  * Subtle motion or interaction (if simple)
+
+Avoid:
+
+* Generic “Hi, I’m a developer” layouts
+
+---
+
+### 2. Work / Projects Section
+
+* Showcase selected work clearly
+* Focus on **quality over quantity**
+* Each project should feel curated, not just listed
+
+Possible structure:
+
+* Title
+* Short description
+* Role / contribution
+* Link (if available)
+
+---
+
+### 3. Experience / CV Section
+
+* CV data should be **parsed and displayed dynamically**
+* Use it to tell a story, not just list roles
+
+Include:
+
+* Companies worked at
+* Roles
+* Timeline
+
+Also:
+
+* Provide a **downloadable CV option**
+
+---
+
+### 4. About / Narrative Layer
+
+* This is where personality comes in
+* Could include:
+
+  * Tech journey
+  * Philosophy
+  * Interests beyond coding
+
+Avoid:
+
+* Overly formal tone
+* Resume-style writing
+
+---
+
+## 🔮 Future Consideration (Not Now)
+
+Do NOT implement yet, but design should allow:
+
+* Blog section
+* Writing / essays
+* Thought pieces
+
+---
+
+## ⚙️ Engineering Constraints
+
+### 🚫 Avoid Overengineering
+
+Do NOT:
+
+* Introduce unnecessary state management
+* Create excessive abstractions
+* Build complex component systems prematurely
+
+Prefer:
+
+* Simple, readable components
+* Direct implementation
+* Clear structure over cleverness
+
+---
+
+### 🧩 Component Philosophy
+
+* Components should be **small and purposeful**
+* No “future-proofing” that adds complexity
+* Only abstract when repetition is clear
+
+---
+
+### 🎯 Performance
+
+* Keep it lightweight
+* Avoid heavy animations or libraries unless necessary
+* Optimize images where possible
+
+---
+
+## 🧠 Scope Control
+
+This is critical.
+
+### DO:
+
+* Focus only on the sections defined above
+* Deliver clean, polished UI
+* Stay aligned with inspiration
+
+### DO NOT:
+
+* Add extra features (dark mode toggle, theme systems, CMS, etc.)
+* Introduce backend systems
+* Build the blog yet
+* Add unnecessary animations or libraries
+
+---
+
+## ✍️ Tone & Content
+
+* Natural, thoughtful, slightly introspective
+* Not overly technical
+* Not overly corporate
+
+---
+
+## ✅ Deliverables
+
+* Clean, well-structured UI implementation
+* Components for:
+
+  * Hero
+  * Work section
+  * Experience/CV
+  * About section
+* CV download functionality
+* Code that is:
+
+  * Readable
+  * Maintainable
+  * Not overengineered
+
+---
+
+## 🧩 Final Note
+
+This project is about **taste and restraint**.
+
+If unsure between:
+
+* “simple and clean”
+* “complex and impressive”
+
+👉 Choose **simple and clean** every time.

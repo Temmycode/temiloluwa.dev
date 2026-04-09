@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,13 +7,13 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Temiloluwa Akisanya — Mobile Engineer",
+  title: "Temiloluwa Akisanya",
   description:
     "Mobile engineer building production applications with Flutter, Swift, and FastAPI.",
 };
@@ -25,11 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${inter.variable} ${syne.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
       </body>
     </html>
   );

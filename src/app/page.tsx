@@ -1,19 +1,21 @@
 import Header from "@/components/Header";
-import About from "@/components/About";
+import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        <About />
+      <main>
+        <Hero />
         <Projects />
+        <Experience />
+        <About />
       </main>
       <Footer />
-      {/* Spacer for mobile bottom nav */}
-      <div className="sm:hidden h-16" />
     </>
   );
 }
